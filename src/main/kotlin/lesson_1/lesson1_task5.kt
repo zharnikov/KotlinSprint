@@ -2,12 +2,11 @@ package lesson_1
 
 fun main() {
 
-    var timeInTheSpace = 6480
+    val secondsInTheSpace= 6480
+    val hourInTheSpace = secondsInTheSpace / 3600
+    val minuteInTheSpace = (secondsInTheSpace % 3600) / 60
+    val secondInTheSpace = secondsInTheSpace % 60
 
-    timeInTheSpace = 48
-
-    val hoursInTheSpace = 1
-
-    println("0$hoursInTheSpace:$timeInTheSpace:00")
+    println( String.format("%02d:%02d:%02d", hourInTheSpace, minuteInTheSpace, secondInTheSpace) )
 
 }
