@@ -9,7 +9,7 @@ fun main() {
 
     val totalWorkersSalary = workers * workersSalary
     val totalSalary = totalWorkersSalary + (trainees * traineesSalary)
-    val averageSalary = totalSalary/(workers + trainees)
+    val averageSalary = totalSalary / (workers + trainees)
 
     println("Зарплата постоянных сотрудников: $totalWorkersSalary")
     println("Общая сумма расходов на зарплату: $totalSalary")
