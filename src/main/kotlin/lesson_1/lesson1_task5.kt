@@ -1,7 +1,7 @@
 package lesson_1
 
-const val MINUTESINHOR = 60
-const val SECONDSINMINUTE = 60
+const val MINUTES_IN_HOR = 60
+const val SECONDS_IN_MINUTE = 60
 
 fun main() {
 
