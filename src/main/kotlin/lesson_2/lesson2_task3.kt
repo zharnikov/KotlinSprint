@@ -10,8 +10,8 @@ fun main() {
     val timeStartMinute = 39
     val timeInTravel = 457
 
-    val timeFinishHour = ((timeStartHour * MINUTEINHOUR + timeInTravel + timeStartMinute) / MINUTEINHOUR) % HOURSINDAY
-    val timeFinishMinute = (timeStartMinute + timeInTravel) % MINUTEINHOUR
+    val timeFinishHour = ((timeStartHour * MINUTE_IN_HOUR + timeInTravel + timeStartMinute) / MINUTE_IN_HOUR) % HOURS_IN_DAY
+    val timeFinishMinute = (timeStartMinute + timeInTravel) % MINUTE_IN_HOUR
 
     println(String.format("Время прибытия поезда: %02d:%02d ", timeFinishHour, timeFinishMinute))
 
