@@ -1,7 +1,7 @@
 package lesson_2
 
-const val hoursInDay = 24
-const val minutesInHour = 60
+const val HOURSINDAY = 24
+const val MINUTEINHOUR = 60
 
 
 fun main() {
@@ -10,8 +10,8 @@ fun main() {
     val timeStartMinute = 39
     val timeInTravel = 457
 
-    val timeFinishHour = ((timeStartHour * minutesInHour + timeInTravel + timeStartMinute) / minutesInHour) % hoursInDay
-    val timeFinishMinute = (timeStartMinute + timeInTravel) % minutesInHour
+    val timeFinishHour = ((timeStartHour * MINUTEINHOUR + timeInTravel + timeStartMinute) / MINUTEINHOUR) % HOURSINDAY
+    val timeFinishMinute = (timeStartMinute + timeInTravel) % MINUTEINHOUR
 
     println(String.format("Время прибытия поезда: %02d:%02d ", timeFinishHour, timeFinishMinute))
 
