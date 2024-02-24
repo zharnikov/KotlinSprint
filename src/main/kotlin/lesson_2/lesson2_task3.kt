@@ -1,7 +1,7 @@
 package lesson_2
 
-const val HOURSINDAY = 24
-const val MINUTEINHOUR = 60
+const val HOURS_IN_DAY = 24
+const val MINUTE_IN_HOUR = 60
 
 
 fun main() {
