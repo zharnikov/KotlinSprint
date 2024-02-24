@@ -6,9 +6,9 @@ const val SECONDS_IN_MINUTE = 60
 fun main() {
 
     val secondsInTheSpace = 6480
-    val hourInTheSpace = secondsInTheSpace / (MINUTESINHOR * SECONDSINMINUTE)
-    val minuteInTheSpace = (secondsInTheSpace % (MINUTESINHOR * SECONDSINMINUTE)) / SECONDSINMINUTE
-    val secondInTheSpace = secondsInTheSpace % SECONDSINMINUTE
+    val hourInTheSpace = secondsInTheSpace / (MINUTES_IN_HOR * SECONDS_IN_MINUTE)
+    val minuteInTheSpace = (secondsInTheSpace % (MINUTES_IN_HOR * SECONDS_IN_MINUTE)) / SECONDS_IN_MINUTE
+    val secondInTheSpace = secondsInTheSpace % SECONDS_IN_MINUTE
 
     println(String.format("%02d:%02d:%02d", hourInTheSpace, minuteInTheSpace, secondInTheSpace))
 
