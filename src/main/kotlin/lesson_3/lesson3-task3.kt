@@ -2,19 +2,19 @@ package lesson_3
 
 fun main() {
 
-    val a = 7
+    val exampleValue = 7
 
     println(
         """
-        $a * 1 = ${a * 1}
-        $a * 2 = ${a * 2}
-        $a * 3 = ${a * 3}
-        $a * 4 = ${a * 4}
-        $a * 5 = ${a * 5}
-        $a * 6 = ${a * 6}
-        $a * 7 = ${a * 7}
-        $a * 8 = ${a * 8}
-        $a * 9 = ${a * 9}      
+        $exampleValue * 1 = ${exampleValue * 1}
+        $exampleValue * 2 = ${exampleValue * 2}
+        $exampleValue * 3 = ${exampleValue * 3}
+        $exampleValue * 4 = ${exampleValue * 4}
+        $exampleValue * 5 = ${exampleValue * 5}
+        $exampleValue * 6 = ${exampleValue * 6}
+        $exampleValue * 7 = ${exampleValue * 7}
+        $exampleValue * 8 = ${exampleValue * 8}
+        $exampleValue * 9 = ${exampleValue * 9}      
     """.trimIndent()
     )
 
