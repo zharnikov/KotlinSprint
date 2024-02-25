@@ -6,10 +6,10 @@ fun main() {
     val name = "Татьяна"
     val patronymic = "Сергеевна"
     var yearsOld = 20
-    println("$surname $name $patronymic" + ", " + yearsOld)
+    println("$surname $name $patronymic, $yearsOld")
 
     surname = "Сидорова"
     yearsOld = 22
-    println("$surname $name $patronymic" + ", " + yearsOld)
+    println("$surname $name $patronymic, $yearsOld")
 
 }
