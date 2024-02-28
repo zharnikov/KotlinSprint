@@ -1,10 +1,10 @@
 package lesson_4
 
-const val SHIP_DAMAGE = true
+const val IS_DAMAGE = false
 const val MIN_CREW = 55
 const val MAX_CREW = 70
 const val FOOD = 50
-const val WEATHER = true
+const val IS_GOOD_WEATHER = true
 
 fun main() {
 
@@ -12,7 +12,7 @@ fun main() {
         "Корабль полностью исправен?\n" +
                 "Укажите в формате: true/false "
     )
-    val shipDamage = readln().toBoolean()
+    val isDamaged = readln().toBoolean()
 
     println("Укажите количество экипажа:")
     val numberCrew = readln().toInt()
@@ -24,10 +24,10 @@ fun main() {
         "Благоприятная ли погода?\n" +
                 "Укажите в формате: true/false "
     )
-    val weatherToday = readln().toBoolean()
+    val isGoodWeather = readln().toBoolean()
 
-    val allowToSail = (shipDamage == SHIP_DAMAGE && (numberCrew in (MIN_CREW + 1)..<MAX_CREW) && numberFood > FOOD)
-            || (shipDamage == !SHIP_DAMAGE && numberCrew == MAX_CREW && numberFood >= FOOD && weatherToday == WEATHER)
+    val allowToSail = (isDamaged == !IS_DAMAGE && (numberCrew in MIN_CREW..<MAX_CREW) && numberFood > FOOD)
+            || (numberCrew == MAX_CREW && numberFood >= FOOD && isGoodWeather == IS_GOOD_WEATHER)
 
     println("Разрешение на отправку корабля в долгосрочное плавание: $allowToSail")
 
