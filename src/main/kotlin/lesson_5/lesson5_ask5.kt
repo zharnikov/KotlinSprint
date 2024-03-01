@@ -24,13 +24,13 @@ fun main() {
     val usersNumbers = listOf(firstNumber, secondNumber, thirdNumber)
     val coincidences = (randomNumbers intersect usersNumbers).size
 
-    println("Загаданные числа: ${randomNumbers.joinToString()}.")
-
     when (coincidences) {
         3 -> println("Вы угадали все три и выиграли главный приз!")
         2 -> println("Вы угадали два и выиграли приз!")
         1 -> println("Вы угадали одно и выиграли утишительный приз!")
         else -> println("Вы не угадали, но не растраивайтесь, попробуйте ещё!")
     }
+
+    println("Загаданные числа: ${randomNumbers.joinToString()}.")
 
 }
