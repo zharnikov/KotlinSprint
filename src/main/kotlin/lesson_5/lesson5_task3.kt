@@ -24,7 +24,7 @@ fun main() {
     } else if (firstUserNumber == FIRST_CORRECT_NUMBER || secondUserNumber == SECOND_CORRECT_NUMBER
         || secondUserNumber == FIRST_CORRECT_NUMBER || firstUserNumber == SECOND_CORRECT_NUMBER
     ) {
-        println("Вы угадали только одно число! Вы выиграли утешительный приз!")
+        println("Вы угадали только одно число и выиграли утешительный приз!")
     } else {
         println("Неудача!Попробуйте снова!")
     }
