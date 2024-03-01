@@ -12,7 +12,6 @@ fun main() {
         Если хотите испытать удачу, то вводите первое число!
     """.trimIndent()
     )
-
     val firstUserNumber = readln().toInt()
 
     if (firstUserNumber == FIRST_CORRECT_NUMBER || firstUserNumber == SECOND_CORRECT_NUMBER) {
