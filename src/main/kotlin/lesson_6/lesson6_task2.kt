@@ -6,10 +6,9 @@ fun main() {
     val recTime = readln().toInt()
     var recTimeForLoop = recTime
 
-    println("До конца осталось:")
     while (recTimeForLoop > 0) {
 
-        println("${recTimeForLoop--} сек.")
+        println("${recTimeForLoop--}")
         Thread.sleep(1000)
 
     }
