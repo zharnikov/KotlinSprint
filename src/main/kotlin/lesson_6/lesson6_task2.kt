@@ -6,7 +6,7 @@ fun main() {
     val recTime = readln().toInt()
     var recTimeForLoop = recTime
 
-    while (recTimeForLoop > 0) {
+    while (recTimeForLoop >= 0) {
 
         println("${recTimeForLoop--}")
         Thread.sleep(1000)
