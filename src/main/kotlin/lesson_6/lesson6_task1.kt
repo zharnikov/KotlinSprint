@@ -9,21 +9,20 @@ fun main() {
     println("Придумайте пароль:")
     val regPassword = readln()
 
-    println("Для входа введите логин:")
-    val login = readln()
+    do {
 
-    println("Введите пароль:")
-    var password = readln()
+        println("Для входа введите логин:")
+        val login = readln()
 
-    if (password == regPassword) {
-        println("Авторизация прошла успешно")
-    } else {
-        do {
-            println("Неверный пароль, попробуйте снова:")
-            password = readln()
-        } while (password != regPassword)
-        println("Авторизация прошла успешно")
-    }
+        println("Введите пароль:")
+        var password = readln()
+
+    } while ( password != regPassword )
+
+    println("Авторизация прошла успешно!")
 
 }
+
+
+
 
