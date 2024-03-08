@@ -1,23 +1,37 @@
 package lesson_7
 
 const val MIN_NUM_PASSWORD = 6
+const val MIN_NUM_DIFF_SYMBOLS = 3
 
 fun main() {
 
-    println("Введите количество символов в пароле. Минимальное значение: $MIN_NUM_PASSWORD ")
-    val userNumPassword = readln().toInt()
     var userPassword = ""
+    var userNumPassword: Int
+    val randomNumber = (0..9).random()
+    val randomLetter = ('a'..'z').random()
+    val randomUpperLetter = ('A'..'Z').random()
 
-    for (i in userNumPassword downTo  1) {
+    do {
+
+        println(
+            "Введите количество символов в пароле. Минимально: $MIN_NUM_PASSWORD"
+        )
+        userNumPassword = readln().toInt()
+
+    } while (userNumPassword < MIN_NUM_PASSWORD)
+
+    userPassword = userPassword + randomNumber + randomLetter + randomUpperLetter
+
+    for (i in (userNumPassword - MIN_NUM_DIFF_SYMBOLS) downTo 1) {
 
         when ((0..2).random()) {
-            0 -> userPassword += (0..9).random()
-            1 -> userPassword += ('a'..'z').random()
-            else -> userPassword += ('A'..'Z').random()
+            1 -> userPassword += randomNumber
+            2 -> userPassword += randomLetter
+            else -> userPassword += randomUpperLetter
         }
 
     }
 
-    println(userPassword)
+    println("Ваш пароль: $userPassword")
 
 }
