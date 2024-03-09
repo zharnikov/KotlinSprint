@@ -10,7 +10,7 @@ fun main() {
     println("Желаете добавить еще?")
     val userDecision = readln()
 
-    if (userDecision == DECISION_TO_ACCESS) {
+    if (userDecision.equals(DECISION_TO_ACCESS, ignoreCase = true)) {
 
         println("Какой ингредиент вы хотите добавить?")
         val userProduct = readln()
