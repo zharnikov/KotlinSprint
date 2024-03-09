@@ -2,7 +2,7 @@ package lesson_8
 
 fun main() {
 
-    var productsForLasagna = mutableListOf("макароны", "фарш", "сыр")
+    val productsForLasagna = mutableListOf("макароны", "фарш", "сыр")
     println("Ингридиенты для лазаньи: ${productsForLasagna.joinToString(", ")}.")
 
     println("Укажите ингредиент, который хотите убрать:")
