@@ -1,10 +1,12 @@
 package lesson_9
 
-fun main () {
+fun main() {
 
     val listOfProducts = listOf("макароны", "сыр", "фарш")
 
-    println("В рецепте есть следующие ингредиенты: ${listOfProducts.joinToString()}.")
-    println("В рецепте есть следующие ингредиенты:\n${listOfProducts.joinToString("\n") }")
+    println("В рецепте есть следующие ингредиенты:")
+    listOfProducts.forEach { product ->
+        println(product)
+    }
 
 }
