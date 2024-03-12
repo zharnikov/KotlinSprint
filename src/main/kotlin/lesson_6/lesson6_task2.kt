@@ -3,15 +3,9 @@ package lesson_6
 fun main() {
 
     println("Сколько секунд нужно засечь:")
-    val recTime = readln().toInt()
-    var recTimeForLoop = recTime
+    val recTime = readln().toLong()
 
-    while (recTimeForLoop > 0) {
-
-        recTimeForLoop--
-        Thread.sleep(1000)
-
-    }
+    Thread.sleep(1000 * recTime)
 
     println("Прошло $recTime сек.")
 
