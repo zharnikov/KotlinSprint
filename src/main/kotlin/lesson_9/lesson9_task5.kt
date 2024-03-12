@@ -6,7 +6,7 @@ const val NUMBER_OF_PRODUCTS = 5
 
 fun main() {
 
-    val userSet = mutableListOf<String>()
+    val userSet = sortedSetOf<String>()
 
     for (i in NUMBER_OF_PRODUCTS downTo 1) {
 
@@ -16,6 +16,6 @@ fun main() {
 
     }
 
-    println(userSet.sorted().toSet().joinToString() )
+    println(userSet.joinToString() )
 
 }
