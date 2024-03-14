@@ -2,9 +2,9 @@ package lesson_10
 
 fun main() {
 
-    val humanRoll = rollOfTheDice()
+    val humanRoll = diceMeaning()
     println("Бросок человека, на костях выпало: $humanRoll")
-    val computerRoll = rollOfTheDice()
+    val computerRoll = diceMeaning()
     println("Бросок компьютера, на костях выпало: $computerRoll")
 
     if (humanRoll > computerRoll) {
@@ -15,9 +15,4 @@ fun main() {
 
 }
 
-fun rollOfTheDice(): Int {
-
-    val randomNumber = (1..6).random()
-    return randomNumber
-
-}
+fun diceMeaning(): Int =  (1..6).random()
