@@ -3,24 +3,22 @@ package lesson_10
 fun main() {
 
     println("Укажите длину пароля:")
-
-    passwordGenerator(readln().toInt())
+    generatePassword(readln().toInt())
 
 }
 
-fun passwordGenerator(passwordLenght: Int) {
+fun generatePassword(passwordLenght: Int) {
 
     var userPassword = ""
+    val numbers = (0..9)
+    val specialSymbols = (32..47).toList()
 
-    for (i in passwordLenght downTo 1) {
+    for (i in 1..passwordLenght) {
 
-        val numberSymbol = (0..9).random()
-        val specialSymbol = "!\"#$%&'()*+,-./".toList().random()
-
-        if (i   % 2 == 0) {
-            userPassword += numberSymbol
+        if (i % 2 == 0) {
+            userPassword += specialSymbols[specialSymbols.indices.random()].toChar()
         } else {
-            userPassword += specialSymbol
+            userPassword += numbers.random()
         }
 
     }
