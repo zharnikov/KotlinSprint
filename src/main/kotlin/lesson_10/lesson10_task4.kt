@@ -6,13 +6,14 @@ fun main() {
 
     do {
 
-        val humanRoll = diceMeaning()
+        val humanRoll = getDiceScore()
         println("Бросок человека, на костях выпало: $humanRoll")
 
-        val computerRoll = diceMeaning()
+        val computerRoll = getDiceScore()
         println("Бросок компьютера, на костях выпало: $computerRoll")
 
         if (humanRoll > computerRoll) {
+            winHumanScore += 1
             println("Победило человечество")
         } else if (humanRoll < computerRoll) {
             println("Победила машина")
@@ -21,15 +22,13 @@ fun main() {
         println("Хотите сыграть ещё раунд: да или нет?")
         val userDecision = readln()
 
-        if (humanRoll > computerRoll) winHumanScore += 1
-
     } while (continueTheGame(userDecision))
 
     println("Спасибо за игру! Вы выиграли партий: $winHumanScore")
 
 }
 
-fun diceMeaning(): Int = (1..6).random()
+fun getDiceScore(): Int = (1..6).random()
 
 fun continueTheGame(userDecision: String): Boolean =
     userDecision.equals("да", ignoreCase = true)
