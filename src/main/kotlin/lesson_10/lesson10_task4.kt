@@ -18,7 +18,7 @@ fun main() {
             println("Победила машина")
         } else println("Победила дружба")
 
-        println(println("Хотите сыграть ещё раунд: да или нет?"))
+        println("Хотите сыграть ещё раунд: да или нет?")
         val userDecision = readln()
 
         if (humanRoll > computerRoll) winHumanScore += 1
