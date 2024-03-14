@@ -1,7 +1,5 @@
 package lesson_11
 
-import kotlin.math.log
-
 fun main() {
 
     val user1 = User(
