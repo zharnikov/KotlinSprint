@@ -7,9 +7,9 @@ fun main() {
 
     var userPassword = ""
     var userNumPassword: Int
-    val randomNumber = (0..9).random()
-    val randomLetter = ('a'..'z').random()
-    val randomUpperLetter = ('A'..'Z').random()
+    val numbers = (0..9).toList()
+    val letters = ('a'..'z').toList()
+    val upperLetters = ('A'..'Z').toList()
 
     do {
 
@@ -20,18 +20,20 @@ fun main() {
 
     } while (userNumPassword < MIN_NUM_PASSWORD)
 
-    userPassword = userPassword + randomNumber + randomLetter + randomUpperLetter
+    userPassword = userPassword + numbers.random() + letters.random() + upperLetters.random()
 
     for (i in (userNumPassword - MIN_NUM_DIFF_SYMBOLS) downTo 1) {
 
         when ((0..2).random()) {
-            1 -> userPassword += randomNumber
-            2 -> userPassword += randomLetter
-            else -> userPassword += randomUpperLetter
+
+            1 -> userPassword += numbers.random()
+            2 -> userPassword += letters.random()
+            else -> userPassword += upperLetters.random()
+
         }
 
     }
 
-    println("Ваш пароль: $userPassword")
+    println("Ваш пароль: ${userPassword.toList().shuffled().joinToString("")}")
 
 }
