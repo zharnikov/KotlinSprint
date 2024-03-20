@@ -34,7 +34,3 @@ class Temperature123(
     }
 
 }
-
-
-
-
