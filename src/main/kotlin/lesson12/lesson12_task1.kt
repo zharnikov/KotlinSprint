@@ -6,7 +6,7 @@ fun main() {
     val day2 = Temperature()
 
     day1.printValues(10, 5, false)
-    day1.printValues(-10, -25, true)
+    day2.printValues(-10, -25, true)
 
 }
 
