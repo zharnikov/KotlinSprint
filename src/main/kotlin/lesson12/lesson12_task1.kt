@@ -10,7 +10,7 @@ fun main() {
 
 }
 
-class Temperature() {
+class Temperature {
 
     val dayTemperature = 0
     val nightTemperature = 0
