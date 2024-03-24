@@ -10,15 +10,11 @@ fun main() {
 
 class UserValue2(
 
-    name: String,
-    telNumber: Long,
-    company: String? = null
+    val name: String,
+    val telNumber: Long,
+    val company: String? = null
 
 ) {
-
-    private val name = name
-    private val telNumber = telNumber
-    private val company = company ?: "<не указано>"
 
     fun printUserValue2() {
 
@@ -26,9 +22,10 @@ class UserValue2(
             """ 
             - Имя: $name
             - Номер: $telNumber
-            - Компания: $company
+            - Компания: ${company ?: "<не указано>"}
         """.trimIndent()
         )
+
     }
 
 }
