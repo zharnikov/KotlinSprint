@@ -10,29 +10,28 @@ fun main() {
         UserValue3("mr. Blond", 5, "Ozon"),
     )
 
+    println(listOfContacts.mapNotNull { it.company })
+
 }
 
 class UserValue3(
 
-    name: String,
-    telNumber: Long,
-    company: String? = null
+    val name: String,
+    val telNumber: Long,
+    val company: String? = null
 
 ) {
 
-    private val name = name
-    private val telNumber = telNumber
-    private val company = company ?: "<не указано>"
+    fun printUserValue3() {
 
-    init {
         println(
-            """
-            Имя: $name,
-            Номер:$telNumber,
-            Компания: $company
-            
+            """ 
+            - Имя: $name
+            - Номер: $telNumber
+            - Компания: ${company ?: "<не указано>"}
         """.trimIndent()
         )
+
     }
 
 }
