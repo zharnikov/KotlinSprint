@@ -8,6 +8,6 @@ class UserValue(
 
     name: String,
     telNumber: Long,
-    company: String? = null
+    company: String?
 
-) {}
+)
