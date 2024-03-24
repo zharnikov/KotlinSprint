@@ -33,9 +33,11 @@ fun main() {
 }
 
 class WeatherValue(
+
     dayTemperature: Int,
     nightTemperature: Int,
     isPrecipitation: Boolean
+
 ) {
 
     val dayTemperature = dayTemperature
