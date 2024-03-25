@@ -2,16 +2,25 @@ package lesson_13
 
 fun main() {
 
+    val listOfContacts = mutableListOf<UserValue4>()
 
     println("Введите имя:")
-    val name = readln()
+    val userName = readln()
+
     println("Введите номер телефона:")
-    val telNumber = readln().toLong()
+    var userNumber = readln().toLongOrNull()
+
+    if (userNumber == null) {
+        while (userNumber == null) {
+            println("Номер нужно указать обязательно:")
+            userNumber = readln().toLongOrNull()
+        }
+    }
+
     println("Введите имя компании:")
-    val company = readln()
+    val userCompany = readln().ifEmpty { null }
 
-    val contact1 = UserValue4(name = name, telNumber = telNumber, company = company )
-
+    listOfContacts.add(UserValue4(name = userName, telNumber = userNumber, company = userCompany))
 
 }
 
@@ -19,7 +28,7 @@ class UserValue4(
 
     val name: String,
     val telNumber: Long,
-    val company: String?
+    val company: String? = null
 
 ) {
 
@@ -29,21 +38,10 @@ class UserValue4(
             """ 
             - Имя: $name
             - Номер: $telNumber
-            - Компания: ${company ?: "<не указано>"}
+            - Компания: ${company ?: "не указано"}
         """.trimIndent()
         )
 
     }
-
-
-//    val listOfContacts = listOf(
-//        UserValue4("mr. Pink", 1),
-//        UserValue4("mr. White", 2),
-//        UserValue4("mr. Orange", 3, "null"),
-//        UserValue4("mr.Blue", 4, "Avito"),
-//        UserValue4("mr. Blond", 5, "Ozon"),
-//    )
-//
-//    println(listOfContacts.mapNotNull { it.company })
 
 }
