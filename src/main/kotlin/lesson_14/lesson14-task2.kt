@@ -38,7 +38,7 @@ open class LinerShip2(
 class CargoShip2(
     speed: Int,
     shipСapacity: Int,
-    liftingСapacity: Int
+    liftingСapacity: Int,
 ) : LinerShip2(speed, shipСapacity, liftingСapacity) {
 
     override fun shipLoadingType() = "активирует погрузочный кран"
