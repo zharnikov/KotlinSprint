@@ -10,11 +10,9 @@ fun main() {
     println("Введите номер телефона:")
     var userNumber = readln().toLongOrNull()
 
-    if (userNumber == null) {
-        while (userNumber == null) {
-            println("Номер нужно указать обязательно:")
-            userNumber = readln().toLongOrNull()
-        }
+    while (userNumber == null) {
+        println("Номер нужно указать обязательно:")
+        userNumber = readln().toLongOrNull()
     }
 
     println("Введите имя компании:")
@@ -25,15 +23,12 @@ fun main() {
 }
 
 class UserValue4(
-
     val name: String,
     val telNumber: Long,
     val company: String? = null
-
 ) {
 
     init {
-
         println(
             """ 
             - Имя: $name
@@ -41,7 +36,5 @@ class UserValue4(
             - Компания: ${company ?: "не указано"}
         """.trimIndent()
         )
-
     }
-
 }
